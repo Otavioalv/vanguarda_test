@@ -45,7 +45,7 @@
             <?php foreach($dados as $linha): ?>
                     <tr class="border">
                         <!-- htmlspecialchar - converte o caracteres especiais em entidades HTML seguras  -->
-                        <td class="border p-2 max-w-80 overflow-auto"><?= htmlspecialchars($linha['nome']) ?>teste</td>
+                        <td class="border p-2 max-w-80 overflow-auto"><?= htmlspecialchars($linha['nome']) ?></td>
                         <td class="border p-2 max-w-80 overflow-auto"><?= htmlspecialchars($linha['email']) ?></td>
                         <td class="border p-2 max-w-80 overflow-auto"><?= htmlspecialchars($linha['mensagem']) ?></td>
                         
