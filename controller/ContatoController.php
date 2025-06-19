@@ -12,24 +12,24 @@ class ContatoController {
     public function handleRequest() {
         try {
             // Rota de criar menssagem
-            if (isset($_GET['criar'])) {
+            if(isset($_GET['criar'])) {
                 $this->create();
                 exit;
             }
 
             // Rota de deletar menssagem
-            if (isset($_GET['excluir'])) {
+            if(isset($_GET['excluir'])) {
                 $this->delete();
                 exit;
             }
 
             // Rota de listar menssagens
-            if (isset($_GET['listar'])) {
+            if(isset($_GET['listar'])) {
                 $this->list();
                 exit;
             }
         } catch (Exception $e) {
-            echo "Erro ao processar a requisição.";
+            echo "Erro ao processar a requisição: ". $e->getMessage();
         }
         
     }
@@ -47,7 +47,7 @@ class ContatoController {
 
             header("Location: index.php?listar=1");
         } catch (Exception $e) {
-            echo "Erro ao salvar a mensagem.";
+            echo "Erro ao salvar a mensagem: ". $e->getMessage();
         }
     }
 
@@ -64,7 +64,7 @@ class ContatoController {
 
             header("Location: index.php?listar=1");
         } catch (Exception $e) {
-            echo "Erro ao excluir a mensagem.";
+            echo "Erro ao excluir a mensagem: ". $e->getMessage();
         }
     }
 
@@ -76,7 +76,7 @@ class ContatoController {
 
             require 'view/form.php';
         } catch (Exception $e) {
-            echo "Erro ao listar as mensagens.";
+            echo "Erro ao listar as mensagens: ". $e->getMessage();
         }
     }
 }

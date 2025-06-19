@@ -15,7 +15,7 @@
             
                 $stmt->execute([$nome, $email, $mensagem]);
             } catch (PDOException $e) {
-                echo "Erro ao criar dados: " . $e->getMessage();
+                echo "Erro ao criar dados: ". $e->getMessage();
             }
         }
 
@@ -27,7 +27,7 @@
                 
                 $stmt->execute([$id]);
             } catch (PDOException $e) {
-                echo "Erro ao deletar dados: " . $e->getMessage();
+                echo "Erro ao deletar dados: ". $e->getMessage();
             }
         }
 
@@ -38,7 +38,7 @@
                 return $this->pdo->query("SELECT * FROM contatos")->fetchAll(PDO::FETCH_ASSOC);
 
             } catch(PDOException $e) {
-                echo "Erro ao listar dados: " . $e->getMessage();
+                echo "Erro ao listar dados: ". $e->getMessage();
                 return [];
             }
 

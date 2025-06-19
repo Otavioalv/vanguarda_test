@@ -26,7 +26,7 @@
 
     
 
-    <?php if (!empty($dados)): ?>
+    <?php if(!empty($dados)): ?>
         <h2 class="my-5 font-bold text-lg">
             Mensagens recebidas
         </h2>
