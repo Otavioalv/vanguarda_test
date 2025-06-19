@@ -45,9 +45,17 @@
             <?php foreach($dados as $linha): ?>
                     <tr class="border">
                         <!-- htmlspecialchar - converte o caracteres especiais em entidades HTML seguras  -->
-                        <td class="border p-2 max-w-80 overflow-auto"><?= htmlspecialchars($linha['nome']) ?></td>
-                        <td class="border p-2 max-w-80 overflow-auto"><?= htmlspecialchars($linha['email']) ?></td>
-                        <td class="border p-2 max-w-80 overflow-auto"><?= htmlspecialchars($linha['mensagem']) ?></td>
+                        <td class="border p-2 max-w-80 overflow-auto">
+                            <?= htmlspecialchars($linha['nome']) ?>
+                        </td>
+                        <td class="border p-2 max-w-80 overflow-auto">
+                            <?= htmlspecialchars($linha['email']) ?>
+                        </td>
+                        <td class="border p-2">
+                            <div class="max-w-80 max-h-32 overflow-auto break-words">
+                                <?= htmlspecialchars($linha['mensagem']) ?>
+                            </div>
+                        </td>
                         
                         <td class="border p-4">
                             <!-- Botao de excluir uma menssagem -->
