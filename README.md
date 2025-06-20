@@ -1,14 +1,13 @@
 # vanguarda-test
 
-Para iniciar o projeto no docker:
+Para iniciar o projeto no Docker, siga esses passos:
+* Execute o comando para subir os containers
 ```
    docker-compose up --build
 ```
 
-
-Ao iniciar o conteiner, acesse no navegador com o link abaixo:
-
-Obs: Esperar o banco de dados terminar de subir
+* Aguarde até que o banco de dados e os dermais serviços estejam iniciados.
+* Após isso, acesse no navegador o endereço:
 ```
    http://localhost:8080/?listar=1
 ```
